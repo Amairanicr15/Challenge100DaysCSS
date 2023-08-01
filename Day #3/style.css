@@ -1,0 +1,31 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    height: 50%;
+    width: 50%;
+    /* background-color: black; */
+    position: relative;
+    transform: rotatez(-45deg);
+    animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotatez(-45deg);
+    }
+    100% {
+        transform: rotatez(120deg);
+    }
+}
+
+.sol {
+    height: 30%;
+    width: 30%;
+    background-color: yellow;
+    border-radius: 50%;
+    
+}
