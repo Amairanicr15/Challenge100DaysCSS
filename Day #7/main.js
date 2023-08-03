@@ -9,3 +9,5 @@ document.querySelectorAll('.menu-icon').forEach(function(element){
         document.querySelector('.menu').classList.toggle('active');
     });
 });
+
+//faltaba agregarlo
