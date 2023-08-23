@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+.frame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 400px;
+    background-color: #57d895;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    align-items: center;
+}
+.hide{
+    display: none;
+}
+.btn{
+    letter-spacing: 2px;
+    position: absolute;
+    top: 175px;
+    font-size: 20px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    font-weight: 600;
+    width: 260px;
+    height: 60px;
+    left: 70px;
+    text-align: center;
+    line-height: 55px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: #37be77;
+}
+img{
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    left: 15px;
+    opacity: 0;
+}
+.circle{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    top: 175px;
+    left: 170px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-dasharray: 183 183;
+    stroke-dashoffset: 183;
+    pointer-events: none;
+    transform: rotate(-90deg);
+}
+input:checked ~ .btn{
+    animation: btn 0.5s ease both, asd 0.5s ease-out 1.5s forwards;
+}
+input:checked ~ .btn img{
+    animation: img 0.5s ease-out 1.5s both;
+}
+input:checked ~ .circle{
+    animation: circle-anim 2s ease-out 0.5s both;
+}
+@keyframes asd{
+    0%{
+        background-color: transparent;
+        border-color: #fff;
+    }
+    100%{
+        background: #fff;
+    }
+}
+@keyframes img{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes btn{
+    0%{
+        width: 260px;
+        left: 70px;
+        border-color: #fff;
+        color: #fff;
+    }
+    50%{
+        color: transparent;
+    }
+    100%{
+        width: 60px;
+        left: 170px;
+        border-color: #45b078;
+        color: transparent;
+    }
+}
+@keyframes circle-anim{
+    0%{
+        stroke-dashoffset: 183;
+    }
+    50%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 183;
+        transform: rotate(-90deg) scale(1);
+        opacity: 1;
+    }
+    90%, 100%{
+        stroke-dasharray: 500 500;
+        transform: rotate(-90deg) scale(2);
+        opacity: 0;
+    }
+}
