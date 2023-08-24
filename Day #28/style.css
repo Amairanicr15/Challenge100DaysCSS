@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #dd3c54;
+}
+.frame{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: #dd3c54;
+}
+.bell{
+    fill: #fff;
+    position: absolute;
+    top: 173px;
+    left: 175px;
+    transform-origin: 50% 0%;
+    animation: ring-bell 2.5s ease infinite;
+}
+.line{
+    fill: none;
+    stroke-width: 2px;
+    stroke: #fff;
+    stroke-linecap: round;
+    position: absolute;
+}
+.line-1,
+.line-2,
+.line-3{
+    top: 170px;
+    right: 150px;
+}
+.line-4,
+.line-5,
+.line-6{
+    top: 170px;
+    left: 150px;
+}
+.line-1{
+    animation: ring-right-1 2.5s ease-out infinite both;
+}
+.line-2{
+    animation: ring-right-2 2.5s ease-out infinite both;
+    animation-delay: .25s;
+}
+.line-3{
+    animation: ring-right-3 2.5s ease-out infinite;
+    animation-delay: .5s;
+}
+.line-4{
+    animation: ring-left-1 2.5s ease-out infinite both;
+}
+.line-5{
+    animation: ring-left-2 2.5s ease-out infinite both;
+    animation-delay: .25s;
+}
+.line-6{
+    animation: ring-left-3 2.5s ease-out infinite;
+    animation-delay: .5s;
+}
+@keyframes ring-right-1 {
+    0%{
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+    5%{
+        opacity: 1;
+    }
+    50%, 100%{
+        opacity: 0;
+        transform: translate(40px) scale(2);
+    }
+}
+@keyframes ring-right-2 {
+    0%, 10%{
+        opacity: 0;
+        transform: translateX(0px) scale(1);
+    }
+    15%{
+        opacity: 1;
+    }
+    50%, 100%{
+        opacity: 0;
+        transform: translate(40px) scale(2);
+    }
+}
+@keyframes ring-right-3 {
+    0%, 20%{
+        opacity: 0;
+        transform: translateX(0px) scale(1);
+    }
+    25%{
+        opacity: 1;
+    }
+    70%, 100%{
+        opacity: 0;
+        transform: translate(40px) scale(2);
+    }
+}
+@keyframes ring-left-1 {
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    50%, 100%{
+        opacity: 0;
+        transform: translate(-40px) scale(2);
+    }
+}
+@keyframes ring-left-2 {
+    0%,10%{
+        opacity: 0;
+        transform: translateX(0px) scale(1);
+    }
+    15%{
+        opacity: 1;
+    }
+    60%, 100%{
+        opacity: 0;
+        transform: translate(-40px) scale(2);
+    }
+}
+@keyframes ring-left-3 {
+    0%,20%{
+        opacity: 0;
+        transform: translateX(0px) scale(1);
+    }
+    25%{
+        opacity: 1;
+    }
+    70%, 100%{
+        opacity: 0;
+        transform: translate(-40px) scale(2);
+    }
+}
+@keyframes ring-bell {
+    0%,70%,100%{
+        transform: rotate(0deg);
+    }
+    5%,15%,25%,35%,45%,55%,65%{
+        transform: rotate(15deg);
+    }
+    10%,20%,30%,40%,50%,60%{
+        transform: rotate(-15deg);
+    }
+}
