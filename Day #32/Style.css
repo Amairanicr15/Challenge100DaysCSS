@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+.frame{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+    background: linear-gradient(to top right, #d2592a 0%, #fdb03a 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.counter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 4px 8px 8px 0px rgba(0,0,0,0.1);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.substract{
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-left: 5px;
+    background-color: transparent;
+    transition: background-color 0.25s ease-out;
+}
+.substract:hover{
+    background-color: #e26e6e;
+    transition: background-color 0.25s ease-out;
+}
+.add:hover{
+    background-color: #8ed273;
+    transition: background-color 0.25s ease-out;
+}
+.substract:hover .line,
+.add:hover .line{
+    background-color: #fff;
+    transition: background-color 0.25s ease-out;
+}
+.substract .line{
+    background-color: #e26e6e;
+}
+.add .line{
+    background-color: #8ed273;
+}
+.add{
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+.line{
+    height: 1.5px;
+    width: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.line-2{
+    transform: rotate(90deg) translate(-50%,-50%);
+    transform-origin: 0% 0%;
+}
+.count{
+    color: #6a85a0;
+    font-size: 20px;
+    font-weight: 600;
+    transform: scale(1);
+    opacity: 1;
+}
+.adding{
+    animation: adding 0.3s ease-in;
+}
+.substracting{
+    animation: substract 0.3s ease-in;
+}
+@keyframes adding{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.4);
+        opacity: 0;
+    }
+    50.01%{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes substracting{
+     0%{
+        opacity: 1;
+        transform: scale(1);
+     }
+     50%{
+        transform: scale(0.8);
+        opacity: 0;
+     }
+     5050.01%{
+        transform: scale(1.4);
+        opacity: 0;
+     }
+     100%{
+        transform: scale(1);
+        opacity: 1;
+     }
+}
