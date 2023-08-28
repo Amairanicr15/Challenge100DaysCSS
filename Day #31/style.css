@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.frame{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ed54cf;
+    border-radius: 10px;
+    box-shadow: 1px 2px 20px 0px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.dot{
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.dot-1 {
+    animation: pendulum 1s ease-in-out infinite
+  }
+.dot-2{
+    animation: pendelum 1.0263157s ease-in-out infinite;
+}
+.dot-3{
+    animation: pendelum 1.052631579s ease-in-out infinite;
+}
+.dot-4{
+    animation: pendelum 1.078949368s ease-in-out infinite;
+}
+.dot-5{
+    animation: pendelum 1.105263158s ease-in-out infinite;
+}
+.dot-6{
+    animation: pendelum 1.131578947s ease-in-out infinite;
+}
+.dot-7{
+    animation: pendelum 1.157894737s ease-in-out infinite;
+}
+.dot-8{
+    animation: pendelum 1.184210526s ease-in-out infinite;
+}
+.dot-9{
+    animation: pendelum 1.210526316s ease-in-out infinite;
+}
+.dot-10{
+    animation: pendelum 1.236842105s ease-in-out infinite;
+}
+.dot-11{
+    animation: pendelum 1.263157895s ease-in-out infinite;
+}
+.dot-12{
+    animation: pendelum 1.289473684s ease-in-out infinite;
+}
+.dot-13{
+    animation: pendelum 1.315789474s ease-in-out infinite;
+}
+.dot-14{
+    animation: pendelum 1.342105263s ease-in-out infinite;
+}
+.dot-15{
+    animation: pendelum 1.368421053s ease-in-out infinite;
+}
+.dot-16{
+    animation: pendelum 1.394736842s ease-in-out infinite;
+}
+.dot-17{
+    animation: pendelum 1.421052632s ease-in-out infinite;
+}
+.dot-18{
+    animation: pendelum 1.447368421s ease-in-out infinite;
+}
+.dot-19{
+    animation: pendelum 1.473684211s ease-in-out infinite;
+}
+.dot-20{
+    animation: pendelum 1.5s ease-in-out infinite;
+}
+@keyframes pendelum{
+    0%, 100%{
+        transform: translate(50px);
+    }
+    50%{
+        transform: translate(-50px);
+    }
+}
