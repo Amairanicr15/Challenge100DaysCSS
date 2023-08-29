@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>100 Days CSS Challenge | Day 36</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="tabs">
+                <div class="menu-left">
+                    <div  id="tab-1" class="tab selected" onlick="changeTab(1)">
+                        <i class="bx bxs-user"></i>
+                    </div>
+                    <div id="tab-2" class="tab" onclick="changeTab(2)">
+                        <i class="bx bxs-comment"></i>
+                    </div>
+                    <div id="tab-3" class="tab" onclick="changeTab(3)">
+                        <i class="bx bxs-bell"></i>
+                    </div>
+                    <div id="tab-4" class="tab" onclick="changeTab(4)">
+                        <i class="bx bxs-cog"></i>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="tab">
+                        <i class="bx bx-search"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-content-1" class="content tab-1 selected">
+                <p class="title">Dashboard</p>
+                <p class="text-content">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div id="tab-content-2" class="content tab-2">
+                <p class="title">Messages</p>
+                <p class="text-content">Lorem ipsum, dolor sit amet consectetur.</p>
+            </div>
+            <div id="tab-content-3" class="content tab-3">
+                <p class="title">Notification</p>
+                <p class="text-content">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div id="tab-content-4" class="content tab-4">
+                <p class="title">Settings</p>
+                <p class="text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
