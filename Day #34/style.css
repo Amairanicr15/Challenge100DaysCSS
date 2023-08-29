@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.frame{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    background-color: #fff04c;
+    border-radius: 10px;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.line{
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: black;
+    animation: line 0.5s ease-in-out forwards;
+}
+@keyframes line{
+    from{
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
+.text{
+    stroke: #fff04c;
+    stroke-dasharray: 270px;
+    stroke-dashoffset: 0;
+}
+.line.top{
+    top: -15px;
+}
+.line.bottom{
+    bottom: -10px;
+}
+.line.right{
+    left: 50%;
+}
+.line.left{
+    right: 50%;
+}
+.text-a1{
+    fill: black;
+    stroke-width: 6;
+    animation: fill 1.2s ease-in-out both;
+}
+.text .a2{
+    fill: none;
+    stroke-width: 12;
+    animation: fill 1.2s ease-in-out both;
+}
+.text .a3{
+    fill: none;
+    stroke-width: 18;
+    animation: fill 2.2s ease-in-out both;
+}
+@keyframes fill{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: 270;
+    }
+}
